@@ -1,3 +1,7 @@
 .myToast i {
     color: red !important;
 }
+
+.myToast span {
+    color: darkcyan !important;
+}
