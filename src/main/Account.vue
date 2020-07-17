@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>account 组件</h1>
-        <mt-button type="primary" @click="show">primary</mt-button>
+        <mt-button type="primary" @click="getHttp">primary</mt-button>
         <router-link to="/account/login">login</router-link>
         <router-link to="/account/register">register</router-link>
 
@@ -19,12 +19,22 @@
             return {}
         },
         methods: {
+            getHttp() {
+                //模拟加载过程
+                let instance = this.show();
+                setTimeout(() => {
+                    //加载完成关闭2
+                    instance.close();
+                }, 3000)
+            },
             show() {
                 // Toast('点击了按钮');
-                Toast({
+                return Toast({
                     message: '提示',
                     position: 'bottom',
-                    duration: 5000,
+                    duration: -1, //设置显示时间ms -1 不消失
+                    iconClass: 'glyphicon glyphicon-heart',// 设置图标、
+                    className: 'myToast', //自定义toast样式
                 });
             }
         }

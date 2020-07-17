@@ -4,6 +4,9 @@ import VueRouter from 'vue-router'
 // 3.手动安装VueRouter
 Vue.use(VueRouter)
 
+import 'bootstrap/dist/css/bootstrap.css'
+import './css/app.css'
+
 // 全局导入所有的 Mint-UI 不推荐很多样式和组件都用不到 全局安装之后不要在按需导入直接使用
 // 导入 Mint-UI
 import MintUI from 'mint-ui'
