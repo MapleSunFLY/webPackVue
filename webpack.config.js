@@ -9,7 +9,7 @@ module.exports = {
     //在配置文件中指定入口和出口
     entry: path.join(__dirname, './src/main.js'),//入口,需要打包的文件
     output: {// 输出文件相关配置
-        path: path.join(__dirname, './dist'), // 打包文件输出目录
+        path: path.join(__dirname, './mui'), // 打包文件输出目录
         filename: 'bundle.js', // 输出文件名称
     },
     // 只要是插件，都一定要 放到 plugins节点中去
